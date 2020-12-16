@@ -41,7 +41,6 @@ android {
         applicationId "br.ufrpe.bsi.dsi.dsi_app"
         minSdkVersion 16
         targetSdkVersion 29
-        
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
