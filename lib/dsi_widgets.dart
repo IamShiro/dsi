@@ -39,8 +39,12 @@ class DsiScaffold extends StatelessWidget {
     return DrawerHeader(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [themeData.backgroundColor, themeData.primaryColor],
-          transform: GradientRotation(pi / 2.0),
+            colors: [
+              Constants.colorGreenBSI3,
+              Constants.colorGreenBSI2,
+            ],
+            stops: [0.8, 1.0],
+            transform: GradientRotation(pi / 2),
         ),
       ),
       child: Column(
@@ -440,6 +444,7 @@ class DsiListPageState<E, T extends StatefulWidget> extends State<T> {
     );
   }
 }
+
 class DsiListTileBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

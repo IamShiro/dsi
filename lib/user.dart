@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:dsi_app/constants.dart';
-import 'package:dsi_app/infra.dart';
+import 'package:dsi_app/dsi_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,18 +9,8 @@ class UserPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DsiScaffold(
-      appBar: _buildAppBar(),
+      title: 'Home Page',
       body: _buildBody(),
-    );
-  }
-
-  Widget _buildAppBar() {
-    return AppBar(
-      leading: Icon(Icons.menu),
-      title: Text('Perfil'),
-      actions: <Widget>[
-        Icon(Icons.more_vert),
-      ],
     );
   }
 
@@ -30,9 +20,7 @@ class UserPage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xfff7ffe8), Color(0xffc2ca94)], // Color(0xffc7ffba)
-            stops: [0.8, 1.0],
-            transform: GradientRotation(pi / 2.03),
+            begin: Alignment.center,
           ),
           image: DecorationImage(
             image: Images.bsiLogo,
